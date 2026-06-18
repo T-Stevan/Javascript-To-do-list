@@ -15,9 +15,7 @@
         <!--Top section -->
         <div class="border-b border-b-gray-200 mb-5 p-4">
             <div class="flex gap-2 justify-center items-center">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#1e90ff" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-icon lucide-circle-check"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#1e90ff" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-icon lucide-circle-check"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <h1 class="font-bold text-4xl ">
                     My To Do List
                 </h1>
@@ -33,35 +31,35 @@
             <label for="task"></label>
             <input class="border border-b-2 border-gray-200 p-1 w-full rounded-lg"
             type="text" name="task" id="task" placeholder="What needs to be done?">
-            <button class="bg-[#1e90ff] p-2 rounded-lg w-40 text-white">
+            <button id="addTaskBtn" class="bg-[#1e90ff] p-2 rounded-lg w-40 text-white" id="addTask">
                 + Add task
             </button>
         </div>
 
         <!-- List completion status icons-->
          <div class="flex justify-start items-center gap-5 text-white">
-            <div class="flex justify-center items-center gap-2 border p-2 px-4 my-4 rounded-2xl bg-[#1e90ff] w-fit">
-                <button>
+            <div id="allTasks" class="flex justify-center items-center gap-2 border p-2 px-4 my-4 rounded-2xl bg-[#1e90ff] w-fit">
+                <button class="flex justify-center items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-icon lucide-list"><path d="M3 5h.01"/><path d="M3 12h.01"/><path d="M3 19h.01"/><path d="M8 5h13"/><path d="M8 12h13"/><path d="M8 19h13"/></svg>
+                    All
                 </button>
-                <p>All</p>
             </div>
-            <div class="flex justify-center items-center gap-2 border p-2 px-4 rounded-2xl bg-[#1e90ff] w-fit">
-                <button>
+            <div id="pendingTasks" class="flex justify-center items-center gap-2 border p-2 px-4 rounded-2xl bg-[#1e90ff] w-fit">
+                <button class="flex justify-center items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-clock-icon lucide-clipboard-clock"><path d="M16 14v2.2l1.6 1"/><path d="M16 4h2a2 2 0 0 1 2 2v.832"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2"/><circle cx="16" cy="16" r="6"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+                    Pending
                 </button>
-                <p>Pending</p>
             </div>
-            <div class="flex justify-center items-center gap-2 border p-2 px-4 rounded-2xl bg-[#1e90ff] w-fit">
-                <button>
+            <div id="completedTasks" class="flex justify-center items-center gap-2 border p-2 px-4 rounded-2xl bg-[#1e90ff] w-fit">
+                <button class="flex justify-center items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check2-icon lucide-calendar-check-2"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M21 14V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/><path d="M3 10h18"/><path d="m16 20 2 2 4-4"/></svg>
+                    Completed
                 </button>
-                <p>Completed</p>
             </div>
         </div>
 
         <!-- Tasks to be completed -->
-        <div class="flex justify-between items-center py-2 px-3 bg-gray-100 border border-b-2 border-gray-200 p-1 w-full rounded-lg">
+        <!-- <div class="flex justify-between items-center py-2 px-3 bg-gray-100 border border-b-2 border-gray-200 p-1 w-full rounded-lg">
             <div>
                 <input type="checkbox" id="task1" class="rounded-full">
                 <label for="task1">Finish Google Course</label>
@@ -76,8 +74,8 @@
                     </svg>
                 </button>
             </div>
-        </div>
-        <div class="flex justify-start mt-2">
+        </div> -->
+        <div id="clearList" class="flex justify-start mt-2">
             <button class="grow gap-2 p-2 px-4 rounded-2xl text-white bg-[#f24343] w-fit">
                 Clear list
             </button>
